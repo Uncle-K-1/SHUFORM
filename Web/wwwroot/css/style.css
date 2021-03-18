@@ -1,0 +1,249 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*navbar styling*/
+
+* {
+   
+    font-family: Raleway;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+table {
+    
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #eadfea;
+}
+
+/*  Navbar layout and styling  */
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #Ba0046;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+    .navbar-links ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        list-style: none;
+    }
+
+        .navbar-links li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 1rem;
+        }
+
+        .navbar-links li:hover {
+            background-color: #621b40;
+        }
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+        }
+
+            .navbar-links ul li {
+                text-align: center;
+            }
+
+                .navbar-links ul li a {
+                    padding: .5rem 1rem;
+                }
+
+        .navbar-links.active {
+            display: flex;
+        }
+}
+
+/*   Modal box layout and styling   */
+#modal-box {
+    width: 400px;
+    height: 250px;
+    background: #03a9f4;
+    box-sizing: border-box;
+    padding: 10px;
+    position: fixed;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
+    box-shadow: 0px 0px 5px 0px #7f7c7c;
+    display: none;
+}
+
+#modal-box .top-bar {
+    width: 100%;
+    background: red;
+    position: relative;
+}
+
+    #modal-box .top-bar #close-button {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+#modal-box .content {
+    width: 100%;
+}
+
+#container {
+    min-width: 200px;
+    padding: 20px 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 70px 0 0 10px;
+    background-color: #Ba0046;
+    color: whitesmoke;
+    margin-bottom: 30px;
+}
+
+
+.index-container {
+    min-width: 200px;
+    padding: 50px 40px;
+    border: 0.1em solid #Ba0046;
+    border-radius: 8px;
+    margin: 70px 0 0 10px;
+    background-color: #eadfea;
+    margin-bottom: 30px;
+    text-align:center;
+}
+
+
+/*   Body layout and styling   */
+
+
+
+main {
+    padding-bottom: 1rem!important;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    color: #Ba0046;
+}
+
+.main-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+    text-align:center;
+}
+
+/*.renderbody {
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    list-style: none
+} */
+
+
+#button1  {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #Ba0046;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+  /*  font-weight: 300; */
+    color: #Ba0046;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+
+#button1:hover {
+    color: #eadfea;
+    background-color: #Ba0046;
+}
+
+@media all and (max-width:30em) {
+     #button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+button:hover {
+    color: #eadfea;
+    background-color: #Ba0046;
+}
+
+@media all and (max-width:30em) {
+     button {
+       display: block;
+      margin: 0.4em auto;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+

@@ -1,0 +1,46 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+
+@model List<Course>
+@{
+    ViewData["Title"] = "Events | Open Day Registration System";
+}
+<h1>All Courses</h1>
+
+<div id="participant-container">
+    <p><strong>Participant Information</strong></p>
+    <ul>
+        <li style="list-style-type: none;"><strong>Participant ID:          </strong>@ViewData["PID"]</li>
+        <li style="list-style-type: none;"><strong>Participant Name:        </strong>@ViewData["PName"]</li>
+        <li style="list-style-type: none;"><strong>Participant Surname:     </strong>@ViewData["PSName"]</li>
+    </ul>
+</div>
+
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li style="list-style-type: none;">
+                <a  class="course-button" onclick="hideDetails()">@item.Subject</a>
+            </li>
+        </ul>
+       
+        <div id="template" >
+            <ul style="text-align: left">
+                <li style="list-style:none"><b>Subject:   </b>     @item.Subject</li>
+                <li style="list-style:none"><b>Department:  </b>   @item.Department</li>
+                <li style="list-style:none"><b>Session:  </b>      @item.Session </li>
+                <li style="list-style:none"><b>Starts at:  </b>    @item.Start</li>
+                <li style="list-style:none"><b>Finishes at:</b>    @item.Finish</li>
+                <li style="list-style:none"><b>Venue:   </b>       @item.Venue</li>
+            </ul>
+
+            <a class="button2" href="/Home/BookCourse?id=@ViewData["PID"]&courseid=@item.CourseID">Select</a>
+        </div>           
+     }
+
+<div id="empty">
+
+</div>
+
+
+
+

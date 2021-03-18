@@ -1,0 +1,426 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway');
+* {
+    box-sizing: border-box;
+}
+html{
+    min-height:100%;
+    font-family: Raleway;
+}
+p{
+    color:#621b40;
+    font-weight:400;
+
+}
+/*main body layout*/
+body{
+    margin:0;
+    
+}
+main{
+    text-align:center;
+}
+
+/*  Navbar layout and styling  */
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #Ba0046;
+    color: whitesmoke;
+    border: solid 1px #621b40;
+}
+
+
+
+.brand-title {
+    font-size: 2rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+    .navbar-links ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        list-style: none;
+        background-color: #Ba0046;
+    }
+
+        .navbar-links li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 1rem;
+        }
+
+        .navbar-links li:hover {
+            background-color: #621b40;
+        }
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 50px;
+        border: solid 1px #621b40;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+            
+        }
+
+            .navbar-links ul li {
+                text-align: center;
+            }
+
+                .navbar-links ul li a {
+                    padding: .5rem 1rem;
+                }
+
+        .navbar-links.active {
+            display: flex;
+           
+        }
+}
+
+/*welcome page styling*/
+.display-1{
+    color:#Ba0046;
+   
+    font-size:36pt;
+}
+
+.welcome-container {
+    margin-top:2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    background-color: #eadfea;
+    padding: 20px;
+    height: 25em;
+    width: 60%;
+    
+    
+}
+
+
+.button1 { /*button styling*/
+         
+    font-size: 20pt;
+    display: inline-block;
+    padding: 0.70em 2.4em;
+    border: 0.1em solid #Ba0046;
+    margin: 4.5em 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 600;
+    color: #Ba0046;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: whitesmoke;
+}
+
+
+    .button1:hover {
+        color: whitesmoke;
+        background-color: #Ba0046;
+         border: 0.1em solid #621b40;
+    }
+
+@media all and (max-width:30em) {
+      .button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+/*registration form page*/
+
+/* Full-width input fields */
+input {
+    width: 100%;
+    padding: 25px;
+    margin: 22px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+    /* Add a background color when the inputs get focus */
+    input:focus {
+        background-color: whitesmoke;
+        
+        outline: #Ba0046;
+    }
+
+/* Set a style for all buttons */
+#register-button {
+    background-color: #Ba0046;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+   #register-button:hover {
+        opacity: 1;
+
+    }
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+  align-content:center;
+    background-color: #eadfea;
+    border-radius:2px;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #621b40;
+    width: 80%; /* Could be more or less, depending on screen size */
+    
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+     #register-button {
+        width: 100%;
+    }
+}
+
+/*Courses layout and styling*/
+
+
+#participant-container {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    background-color: #eadfea;
+    padding: 20px;
+    border: 0.1em solid #Ba0046;
+    width: 60%;
+    list-style-type:none;
+        
+}
+
+ul, li {
+    list-style-type: none;
+    text-align: left;
+    text-decoration: none;
+    color: #Ba0046;
+}
+#template {
+    background-color: #eadfea;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.1em solid #Ba0046;
+    padding: 20px;
+    list-style-type:none;
+    text-decoration:none;
+}
+li {
+    list-style: none;
+}
+
+@media (max-width: 800px){
+   #template{
+        width:100%
+    }
+
+    #participant-container {
+       
+        border-radius: 2px;
+        background-color: #eadfea;
+        padding: 20px;
+        width: 100%;
+        list-style-type:none;
+    }
+}
+
+.button2 { /*button styling*/
+
+    font-size: 10pt;
+    display: inline-block;
+    padding: 0.735em 1.2em;
+    border: 0.1em solid #Ba0046;
+    margin:1em 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 600;
+    color: #Ba0046;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: whitesmoke;
+}
+
+
+    .button2:hover {
+        color: whitesmoke;
+        background-color: #Ba0046;
+        border: 0.1em solid #621b40;
+    }
+
+@media all and (max-width:30em) {
+      .button2 {
+        display: block;
+        margin: 0.4em auto;
+    }
+    .course-button {
+        display: block;
+       
+    }
+}
+.course-button {
+    font-size: 12pt;
+    display: inline-block;
+    padding: 0.70em 2.4em;
+    border: 0.1em solid #Ba0046;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: 600;
+    color: #Ba0046;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: whitesmoke;
+}
+
+
+.course-button:hover {
+    color: whitesmoke;
+    background-color: #Ba0046;
+    border: 0.1em solid #621b40;
+}
+
+/* Confirmation page*/
+
+
+
+.confirmation-container {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    background-color: #eadfea;
+    padding: 20px;
+   height:100%;
+    width: 60%;
+}
+/*bookings page*/
+
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.td {
+    border: 1px solid #Ba0046;
+    text-align: left;
+    padding: 8px;
+    
+}
+.th {
+    background-color: #Ba0046;
+    border: 1px solid #Ba0046;
+    text-align: left;
+    padding: 8px;
+    color: whitesmoke;
+}
+
+.tr:nth-child(even) {
+    background-color: #eadfea;
+}
+
+
+/* footer styling*/
+.footer {
+    position: fixed;
+    border-top: 1px solid #621b40;
+    background-color: #Ba0046;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 40px; /* Vertically center the text there */
+}
+
+
+    .footer p {
+        font-size: 15pt;
+        
+        color: whitesmoke;
+        text-align: center;
+        font-weight:600;
+    }
+
+    #empty{
+        height:70px;
+    }

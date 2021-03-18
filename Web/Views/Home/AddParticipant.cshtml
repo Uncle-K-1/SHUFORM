@@ -1,0 +1,38 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model Web.Models.ParticipantForm
+@{
+    ViewData["Title"] = "Register | Open Day Registration System";
+}
+
+
+<div class="text-center">
+    <h1 class="display-1">Event Registration</h1>
+</div>
+
+<form  class="modal-content" asp-action="AddParticipant" asp-controller="Home">
+    <div class="container">
+        <h3>Register Here</h3>
+        <p>Please fill in this registration form in orderto book an event.</p>
+        
+        <label for="Name"><b>First Name</b></label>
+        <input placeholder="Your first name.." asp-for="Name" />
+        <span asp-validation-for="Name"class="error"></span>
+
+        <label for="Surname"><b>Last Name</b></label>
+        <input placeholder="Your last name.." asp-for="Surname">
+        <span asp-validation-for="Surname" class="error"></span>
+
+        <label for="Email"><b>Email</b></label>
+        <input placeholder="Your email.." asp-for="Email">
+        <span asp-validation-for="Email"class="error"></span>
+
+        <p>By creating an account you agree to our <a href="#" style="color:#Ba0046">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+
+            <input id="register-button" type="submit" value="Register">
+        </div>
+    </div>
+</form>
+
+

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/style2.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"]</title>
+
+</head>
+<body>
+    <nav class="navbar box-shadow">
+        <div class="brand-title">ShuForm</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="@Url.Action("Index","Home")">Index</a></li>
+                <li><a href="@Url.Action("Index","Booking")">Bookings</a></li>
+                <li><a href="@Url.Action("Privacy","Home")">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+       
+            <main style="width:100%">
+                @RenderBody()
+            </main>
+            
+            <footer class="footer">
+                <p>Copyright © @DateTime.Now.Year</p>
+            </footer>
+
+            <script type="text/javascript" src="~/js/site.js"></script>
+        
+    </section>
+</body>
+
+</html>

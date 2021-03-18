@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Bookings | Open Day Registration System";
+}
+
+@model List<Booking>
+
+
+<h1 class="display-1">All Bookings </h1>
+
+
+
+<table class="table">
+    <tr class="tr">
+        <th class="th">Booking ID:</th>
+        <th class="th">Course Name</th>
+        <th class="th">Participant Name</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class="tr">
+            <td class="td">@item.BookingID</td>
+            <td class="td">@item.Subject</td>
+            <td class="td">@item.Name<p>  </p> @item.Surname </td>
+
+        </tr>
+
+    }
+</table>
+
+<div id="empty">
+
+</div>
+
